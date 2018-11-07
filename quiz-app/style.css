@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*First method but background pic shows whitespace at bottom during size changes
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('https://dl.kraken.io/web/dbc7b9f542042962ea10556fd161355c/got_pic_lower.jpg');
+    background-size: 100%;  
+    background-repeat: no-repeat;
+    
+}*/
+
+body {
+    background: url('background_pic.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;  
+    color: white; 
+}
+
+header {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+header::before,
+header::after {
+    display: table;
+    content: '';
+}
+header::after {
+    clear: both;
+}
+
+.col-4,
+.col-8 {
+    float: left;
+    padding-left: 1.04166666%;
+    padding-right: 1.04166666%;
+}
+.col-4 {
+    width: 50%;
+}
+.col-8 {
+    width: 50%;
+}
+
+.logo {
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+
+header ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    padding-right: 25%;
+    text-transform: uppercase;
+}
+
+.quizStart {
+  text-align: center;
+  width: 33%;
+  margin-top: 150px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: ghostwhite;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: strong;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    width: 25%;
+    text-align: center;
+    background-color: rgba(184, 140, 58, 0.774);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.startButton {
+  text-align: center;
+}
+
+button:hover, button:focus {
+  background-color: #92081473;
+  color: #b6982e strong;
+}
+
+main {
+  position: relative;
+  top: 150px;
+}
+
+main div {
+    margin: 0 auto;
+}
+
+.question {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  position: relative;
+}
+
+label:nth-child(1) {
+  background-color: transparent;
+  margin: auto;
+  text-align: left;
+  display: block;
+}
+
+label:nth-child(2) {
+  background-color: transparent;
+  margin: auto;
+  text-align: left;
+  display: block;
+}
+
+label:nth-child(3) {
+  background-color: transparent;
+  margin: auto;
+  text-align: left;
+  display: block;
+}
+
+label:nth-child(4) {
+  background-color: transparent;
+  margin: auto;
+  text-align: left;
+  display: block;
+}
+
+label {
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 22px;
+    width: 33%;
+    border-style: ridge;
+    border-color: rgba(218, 165, 32, 0.507);    
+}
+
+label:hover, label:focus {
+    background-color: #92081473;
+    color: #b6982e strong;
+}
+
+fieldset {
+    border: none;
+    margin: auto;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+input:checked {
+    border: 8px solid  #d42533c2;
+}
+input[type=radio] {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+
+form button {
+    margin: auto;
+    padding: 20px;
+    display: block;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 33%;
+    text-align: center;
+    background-color: rgba(184, 140, 58, 0.774);
+}
+form button:hover, form button:focus {
+    background-color: #92081473;
+    color: #b6982e strong;
+}
+
+.answer {
+    flex: 1 1 auto;
+}
+
+.questionAnswerForm {
+    display: none; 
+    width: 100%;
+}
+.correctFeedback {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  position: relative;
+}
+
+.correctFeedback button {
+  padding: 20px;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 33%;
+  text-align: center;
+  background-color: rgba(184, 140, 58, 0.774);
+}
+
+.correctFeedback button:hover, .correctFeedback button:focus {
+    background-color: #92081473;
+    color: #b6982e strong;
+}
+.correctFeedback p {
+    text-align: center;
+    color: ghostwhite;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: strong;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 640px) {
+  header ul {
+    margin: 10px;
+    text-align: center
+  }
+  h1 {
+    font-size: 1.5em
+  }
+  header ul li {
+    padding: 10px;
+    font-size: 18px
+  }
+  .col-4,
+  .col-8 {
+    width: 100%
+  }
+}
